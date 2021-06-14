@@ -1,0 +1,39 @@
+site:
+  title: Apiman Documentation
+  url: https://www.apiman.io/apiman-docs
+  start_page: apiman-user-guide::index.adoc
+  keys:
+    google_analytics: "UA-56678850-3"
+
+content:
+  sources:
+    - url: https://github.com/apiman/apiman-docs-user-guide.git
+      branches:
+        - antora
+    - url: https://github.com/apiman/apiman-docs-installation-guide.git
+      branches:
+        - antora
+    - url: https://github.com/apiman/apiman.git
+      branches:
+        - antora
+      start_path: docs
+
+ui:
+  bundle:
+    url: https://gitlab.com/antora/antora-ui-default/-/jobs/artifacts/master/raw/build/ui-bundle.zip?job=bundle-stable
+    snapshot: true
+  supplemental_files:
+    - path: ui.yml
+      contents: |
+        static_files: [ .nojekyll ]
+    - path: .nojekyll
+
+output:
+  dir: ./docs
+
+asciidoc:
+  attributes:
+    apiman-version-release: "TODO"
+    apiman-version-snapshot: "TODO"
+    apiman-version-wildfly10: "TODO"
+    apiman-version-wildfly9: "TODO"
