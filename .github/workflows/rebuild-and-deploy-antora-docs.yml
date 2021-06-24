@@ -3,7 +3,8 @@ name: rebuild and deploy Antora documentation website
 on:
   push:
     branches: [ antora ]
-
+    paths-ignore:
+      - '.github/workflows'
   workflow_dispatch:
 
 jobs:
@@ -28,5 +29,6 @@ jobs:
         uses: EndBug/add-and-commit@v7.2.1
         with:
           author_name: apiman-ci
+          default_author: user_info
           message: 'chore: regenerate documentation with Antora'
           add: ./docs --force
