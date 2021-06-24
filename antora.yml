@@ -1,0 +1,4 @@
+name: apiman-navigation
+title: Apiman Welcome
+version: latest
+start_page: ROOT:index.adoc

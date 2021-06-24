@@ -1,12 +1,15 @@
 site:
   title: Apiman Documentation
   url: https://www.apiman.io/apiman-docs
-  start_page: apiman-user-guide::index.adoc
+  start_page: apiman-navigation::index.adoc
   keys:
     google_analytics: "UA-56678850-3"
 
 content:
   sources:
+    - url: ./
+      branches:
+        - HEAD
     - url: https://github.com/apiman/apiman-docs-user-guide.git
       branches:
         - antora
