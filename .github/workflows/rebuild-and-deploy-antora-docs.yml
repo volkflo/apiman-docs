@@ -6,7 +6,9 @@ on:
     paths-ignore:
       - '.github/workflows'
   workflow_dispatch:
-
+  repository_dispatch:
+    types:
+      - rebuild-apiman-antora-docs
 jobs:
   build:
     runs-on: ubuntu-latest
