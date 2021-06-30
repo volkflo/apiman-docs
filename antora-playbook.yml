@@ -1,7 +1,7 @@
 site:
   title: Apiman Documentation
-  url: https://www.apiman.io/apiman-docs
-  start_page: apiman-navigation::index.adoc
+  url: https://volkflo.github.io/apiman-docs
+  start_page: welcome::index.adoc
   keys:
     google_analytics: "UA-56678850-3"
 
@@ -12,13 +12,13 @@ content:
         - HEAD
     - url: https://github.com/apiman/apiman-docs-user-guide.git
       branches:
-        - antora
+        - antora-updated
     - url: https://github.com/apiman/apiman-docs-installation-guide.git
       branches:
-        - antora
+        - antora-updated
     - url: https://github.com/apiman/apiman.git
       branches:
-        - antora
+        - antora-updated
       start_path: docs
 
 ui:
